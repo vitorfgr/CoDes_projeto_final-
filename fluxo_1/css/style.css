@@ -37,6 +37,8 @@ header h1{
     position: relative;
     font-size:1.5rem;
     color:white;
+    font-family: 'IBM Plex Sans', sans-serif;
+
 }
 
 main{
@@ -47,14 +49,40 @@ main{
     align-items: center;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #D6C1C0;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+.footer .fa-home{
+    font-size: 1.5rem !important;
+    margin-left: 0.5rem;
+}
+.footer .fa-user{
+    font-size: 1.5rem !important;
+    margin-right: 0.5rem;
+}
+.footer .fa-search{
+    font-size: 1.5rem !important;
+}
+/* intro*/
 .intro a{
     display: block;
     border: .1rem solid black;
     padding: .5rem 1rem;
     text-decoration: none;
     font-size: 1.5rem;
-    color:#434961;
     text-decoration: underline;
+    font-family: 'PT Serif', serif;
 }
 
 .intro h2 {
@@ -63,7 +91,7 @@ main{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color:#434961;
+    font-family: 'PT Serif', serif;
 }
 
 /* para a tela menu */
@@ -101,8 +129,14 @@ main{
     margin-bottom: 0.5rem;
 }
 
+.profile p{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+}
+
 .fa-user{
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .post-1 img{
@@ -130,9 +164,31 @@ main{
     margin-bottom: 1rem;
 }
 
-.fa-comment-o {
+.like p {
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+}
+
+.like .fa-heart-o{
+    margin-left: 0.5rem;
+}
+
+.like .fa-comment-o {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+}
+
+.profile-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.profile-2 p{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
 }
 
 .post-2 img{
@@ -140,4 +196,35 @@ main{
     align-self: center;
     height: 50%;
     width: 50%;
+}
+
+.Seletivo{
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    border: .1rem solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.fa-id-card-o{
+    display: flex;
+    font-size: 4.5rem !important;
+}
+
+/* Tela perfil time*/
+
+.pain {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: space-evenly;
+    overflow: scroll;
+    width: 100%;
+}
+
+.pain img {
+    height: 5rem;
+    width: 5rem;
 }
