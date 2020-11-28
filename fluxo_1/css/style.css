@@ -219,12 +219,53 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: space-evenly;
-    overflow: scroll;
-    width: 100%;
+}
+
+.linha{
+    flex-grow: 1;
+    display: flex;
+    border-bottom: .1rem solid black;
+
 }
 
 .pain img {
-    height: 5rem;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
     width: 5rem;
+    height: 5rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    height: 75px;
+    object-fit: cover;
+    width: 75px; 
 }
+
+.name p{
+    flex-grow: 1;
+    display: flex;
+    justify-content: self-start;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.status{
+    flex-grow: 1;
+    display: flex;
+    justify-self:flex-end;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.post_f {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    border: .1rem solid black;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+}
+
+
