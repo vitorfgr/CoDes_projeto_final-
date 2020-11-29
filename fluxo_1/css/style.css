@@ -19,6 +19,35 @@ header{
     height: 100%;
 }
 
+#sidebar {
+    position:absolute;
+    top:0px;
+    left:-200px;
+    width:10rem;
+    height:100%;
+    background:#151719;
+    transition:all 300ms linear;
+}
+#sidebar.active {
+    left:0px;
+}
+#sidebar .toggle-btn {
+    position:absolute;
+    left:13rem;
+    top:1rem;
+}
+  
+#sidebar .toggle-btn .fa-bars{
+   cursor:pointer; 
+}
+#sidebar div.list div.item {
+    padding:1rem 2rem;
+    border-bottom:0.1rem solid #444;
+    color:#fcfcfc;
+    text-transform:uppercase;
+    font-size:1rem;
+}
+
 .fa-bars{    
     position: absolute;
     top: 1rem;
@@ -44,9 +73,9 @@ header h1{
 main{
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
 }
 
 .footer {
@@ -75,11 +104,16 @@ main{
     font-size: 1.5rem !important;
 }
 /* intro*/
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .intro a{
     display: block;
     border: .1rem solid black;
+    align-self: center;
     padding: .5rem 1rem;
-    text-decoration: none;
     font-size: 1.5rem;
     text-decoration: underline;
     font-family: 'PT Serif', serif;
@@ -88,23 +122,13 @@ main{
 .intro h2 {
     position: relative;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
     font-size: 1.5rem;
     font-family: 'PT Serif', serif;
 }
 
 /* para a tela menu */
 
-.menu {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-evenly;
-    overflow: scroll;
-    width: 100%;
-}
 
 .menu ul{
     display: flex;
@@ -112,8 +136,20 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
+    height: 100%; 
 }
 
+.feed {
+    align-self: flex-start;
+    width: 100%;
+    border-bottom: .1rem solid black;
+
+}
+.feed p{
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    color: #434961;
+}
 .post-1{
     position: relative;
     flex-direction: column;
@@ -143,12 +179,12 @@ main{
     display: block;
     position: relative;
     align-self: center;
-    height: 50%;
-    width: 50%;
+    height: 30%;
+    width: 30%;
 }
 
 .img {
-    width: 95%%;
+    width: 88%;
     display: flex;
     justify-content: center;
     border: .1rem solid black;
@@ -186,9 +222,10 @@ main{
     margin-bottom: 0.5rem;
 }
 
-.profile-2 p{
+.profile-2 a{
     font-size: 1rem;
     font-family: 'PT Serif', serif;
+    color: black;
 }
 
 .post-2 img{
@@ -214,58 +251,205 @@ main{
 
 /* Tela perfil time*/
 
-.pain {
-    flex-grow: 1;
+.pain-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nome_pagina{
+    font-family: 'IBM Plex Sans', sans-serif;
+    align-self: center;
+    font-size: 1.5rem;
+}
+.pain-ul .cima{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: flex-start;
+}
+
+.top{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-.linha{
-    flex-grow: 1;
+.contadores{
     display: flex;
-    border-bottom: .1rem solid black;
-
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
 }
 
+.seguidores{
+    border: .1rem solid black;
+    border-right: 0rem;
+    height: 2rem;
+    padding: 0.5rem;
+}
+.num{
+    padding-left: 1rem;
+    font-size: 0.75rem;
+    font-family: 'PT Serif', serif;
+}
+.num-2{
+    font-size: 0.75rem;
+    font-family: 'PT Serif', serif;
+}
+.palavra{
+    text-decoration: underline;
+    font-size: 0.75rem;
+    font-family: 'PT Serif', serif;
+}
+.Posts{
+    border: .1rem solid black;
+    border-left: 0rem;
+    padding: 0.5rem;
+    margin-right: 1%;
+    height: 2rem;
+}
 .pain img {
-    position: absolute;
-    top: 5rem;
-    left: 2rem;
-    width: 5rem;
+    align-self: flex-start;
     height: 5rem;
-    background-color: #ddd;
+    width: 5rem;
+    margin-top: 5%;
+    background-color: #dddddd;
     border-radius: 50%;
-    height: 75px;
     object-fit: cover;
-    width: 75px; 
-}
-
-.name p{
-    flex-grow: 1;
-    display: flex;
-    justify-content: self-start;
-    font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
+}
+
+.status p{
+    font-size: 1rem;
+    padding: 0.1rem;
+    font-family: 'PT Serif', serif;
+}
+
+.Postagens{
+    display:flex;
+    flex-grow:1;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.linha{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly !important;
+    border-bottom: .1rem solid black;
+}
+.borda{
+    padding: 1rem;
+    border-right: .1rem solid black; 
+}
+
+.ultimo{
+    padding: 1rem;
+}
+
+.linha i{
+    font-size: 3rem;
+}
+
+/*Inscrição*/
+
+.Inscrição{
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Inscrição form{
     display: flex;
-    justify-self:flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-self: space-around;
+}
+
+.Titulo{
+    border-bottom: .1rem solid black; 
+}
+
+.Titulo p{
     font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
-}
+    font-family: 'IBM Plex Sans', sans-serif;
+} 
 
-.post_f {
-    width: 30%;
-    height: 50%;
+/* publicar */
+.publicar_main{
     display: flex;
-    border: .1rem solid black;
-    padding: 0.5rem;
-    margin: 0.5rem;
-
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.publicar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+.Postar {
+    align-self: flex-start;
+    width: 100%;
+    border-bottom: .1rem solid black;
+    margin-top: 1rem;
 
+}
+.Postar p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    color: #434961;
+}
+
+.publicar_post{
+    border: .1rem solid black;
+    padding: 1rem;
+}
+
+.publicar_top form{
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+.profile_p{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    margin-bottom: 0.5rem;
+}
+
+.profile_p p{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+}
+
+.publicar_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.publicar_bottom .voltar {
+    border: .1rem solid black;
+}
