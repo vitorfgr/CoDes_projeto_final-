@@ -14,13 +14,23 @@
     </head>
     <body class="fundo">
         <header>
-            <i class="fa fa-bars"></i>
+            <div class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </div>
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <h1>
                 E-scout
             </h1>
         </header>
         <main class="publicar_main">
+            <div class="list">
+                <div class="list-2">
+                    <div class="item">Ajustes</div>
+                    <div class="item">Salvos</div>
+                    <div class="item">Descubra pessoas</div>
+                    <div class="item">Inscrições</div>
+                </div>
+            </div>
             <div class="Postar">
                 <p>
                     Editar Posts
@@ -39,11 +49,11 @@
                             Parabéns! Você se inscreveu no processo seletivo da PaIN
                         </p>    
                     </div>
-                    <form>
-                        <label for="fname">Adicionar Comentário:</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="fname">Marcar alguém:</label><br>
-                        <input type="text" id="fname" name="fname"><br>
+                    <form class="form_publicar">
+                        <label>Adicionar comentário:</label>
+                        <input class="comentário" type="text" value="">
+                        <label>Marcar alguém:</label>
+                        <input class="marcar" type="text" value="">
                     </form>
                 </li>
                 <li class = 'publicar_bottom'>

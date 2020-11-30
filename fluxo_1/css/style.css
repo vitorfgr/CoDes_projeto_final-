@@ -15,45 +15,44 @@ header{
 
 .fundo{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     height: 100%;
 }
 
-#sidebar {
+.list {
+    display: none;
+    flex-grow: 1;
     position:absolute;
     top:0px;
-    left:-200px;
+    left:0px;
     width:10rem;
-    height:100%;
-    background:#151719;
+    height: 100%;
+    background:#434961;
+    opacity: 1;
     transition:all 300ms linear;
 }
-#sidebar.active {
-    left:0px;
-}
-#sidebar .toggle-btn {
+
+.toggle-btn {
     position:absolute;
-    left:13rem;
+    left:1rem;
     top:1rem;
+    cursor:pointer; 
 }
-  
-#sidebar .toggle-btn .fa-bars{
-   cursor:pointer; 
+.list-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-#sidebar div.list div.item {
+.list-2 .item {
     padding:1rem 2rem;
-    border-bottom:0.1rem solid #444;
-    color:#fcfcfc;
+    border-bottom:0.1rem solid black;
+    color: black;
     text-transform:uppercase;
     font-size:1rem;
+    font-family: 'PT Serif', serif;
 }
 
-.fa-bars{    
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 2rem;
-}
 
 .fa-envelope-o{
     position: absolute;
@@ -71,8 +70,8 @@ header h1{
 }
 
 main{
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     overflow: scroll;
     width: 100%;
     height: 100%;
@@ -117,10 +116,12 @@ main{
     font-size: 1.5rem;
     text-decoration: underline;
     font-family: 'PT Serif', serif;
+    color: black;
+    text-decoration: none;
 }
 
 .intro h2 {
-    position: relative;
+    display: flex;
     flex-direction: column;
     align-self: center;
     font-size: 1.5rem;
@@ -168,6 +169,7 @@ main{
 .profile p{
     font-size: 1rem;
     font-family: 'PT Serif', serif;
+    text-decoration: underline;
 }
 
 .fa-user{
@@ -257,11 +259,13 @@ main{
     align-items: center;
 }
 .nome_pagina{
+    display: flex;
     font-family: 'IBM Plex Sans', sans-serif;
     align-self: center;
     font-size: 1.5rem;
 }
 .pain-ul .cima{
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -334,8 +338,14 @@ main{
 
 .status p{
     font-size: 1rem;
+    color: black;
     padding: 0.1rem;
     font-family: 'PT Serif', serif;
+}
+
+.status a{
+    color: black;
+    text-decoration: bold;
 }
 
 .Postagens{
@@ -367,6 +377,23 @@ main{
 
 /*Inscrição*/
 
+.main_inscricao{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+.Titulo{
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    border-bottom: .1rem solid black; 
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color:#434961;
+}
+
 .Inscrição{
     width: 100%;
     height: 100%;
@@ -374,25 +401,34 @@ main{
     flex-grow: 1;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
 }
 
-.Inscrição form{
+.Inscrição .form form{
     display: flex;
     flex-direction: column;
-    justify-self: space-around;
+    justify-content: space-evenly;
 }
 
-.Titulo{
-    border-bottom: .1rem solid black; 
+.nome, .idade, .cidade, .email {
+    margin-bottom: 0.5rem;
+}
+.Inscrição .form{
+    align-self: center;
 }
 
-.Titulo p{
-    font-size: 1.5rem;
-    font-family: 'IBM Plex Sans', sans-serif;
-} 
+.inscricao_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.inscricao_bottom .voltar {
+    border: .1rem solid black;
+}
+
 
 /* publicar */
+
 .publicar_main{
     display: flex;
     flex-grow: 1;
@@ -427,6 +463,13 @@ main{
 }
 
 .publicar_top form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: flex-start;
+}
+
+.comentário, .marcar{
     padding: 0.2rem;
     margin: 0.2rem;
 }
