@@ -11,65 +11,57 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
         <script src="js/java.js"></script>
+        <script src="js/java_publicar.js"></script>
     </head>
     <body class="fundo">
         <header>
-            <i class="fa fa-bars"></i>
+            <div class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </div>
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <h1>
                 E-scout
             </h1>
         </header>
-        <main class="postar">
-            <ul class="postar-ul">
-                <li class="cima">
-                    <p class="Postando">
-                        POSTANDO
-                    </p>
-                    <div class="top">
-                        <img src="img/pedro.jpg" alt="perfil cliente">
-                        <ul class="comment">
-                            <li>
-                                <p>
-                                    Comentarios:
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    #PainGaming 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    #LoL
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    #VIRADA
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    #FINAL
-                                </p>
-                            </li>
-                        </ul>
-                    <div class="tag">
-                        <ul>
-                            <li>
-                                <p>
-                                    Tags:
-                                </p>
-        
-                            </li>
-                            <li>
-                                <p>
-                                    @PainGaming
-                                </p>
-                            </li>
-                        </ul>
+        <main class="menu_postando">
+            <div class="list">
+                <div class="list-2">
+                    <div class="item">Ajustes</div>
+                    <div class="item">Salvos</div>
+                    <div class="item">Descubra pessoas</div>
+                    <div class="item">Inscrições</div>
+                </div>
+            </div>
+            <p class="postar_postando">
+                Editar Posts
+            </p>
+            <ul class="postando">
+                <li class="postando_top">
+                    <div class="profile_postando">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>
+                            Pedro S.
+                        </p>
                     </div>
+                    <div class= "publicar_video"> 
+                        <video width="320" height="240" controls>
+                            <source src="video/Jogada.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <form class="form_postar">
+                        <label>Adicionar comentário:</label>
+                        <input class="comentário" type="text" value="...">
+                        <label>Marcar alguém:</label>
+                        <input class="marcar" type="text" value=" @">
+                    </form>
+                </li>
+                <li class = 'postar_bottom'>
+                    <a href="inscricao.html" class="voltar">
+                        Voltar
+                    </a>
+                    <input class="enviar_p" type="submit" value="Compartilhar Post" onclick="location.href='perfil_jogador_F2_postado.html';">
+                </li>
             </ul>
         </main>
         <footer>

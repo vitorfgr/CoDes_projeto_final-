@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    as = document.querySelector('.compartilhar_pu')
+    as = document.querySelector('.enviar_p')
     console.log(as)
 
     comentario = document.querySelector(".comentário").value

@@ -15,45 +15,46 @@ header{
 
 .fundo{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     height: 100%;
 }
 
-#sidebar {
+.list {
+    display: none;
+    flex-grow: 1;
     position:absolute;
     top:0px;
-    left:-200px;
+    left:0px;
     width:10rem;
-    height:100%;
-    background:#151719;
+    height: 100%;
+    background:#434961;
+    opacity: 1;
+    z-index: 300;
     transition:all 300ms linear;
 }
-#sidebar.active {
-    left:0px;
-}
-#sidebar .toggle-btn {
+
+.toggle-btn {
     position:absolute;
-    left:13rem;
+    left:1rem;
     top:1rem;
+    cursor:pointer;
+    transition:all 300ms linear; 
 }
-  
-#sidebar .toggle-btn .fa-bars{
-   cursor:pointer; 
+.list-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-#sidebar div.list div.item {
+.list-2 .item {
     padding:1rem 2rem;
-    border-bottom:0.1rem solid #444;
-    color:#fcfcfc;
+    border-bottom:0.1rem solid black;
+    color: black;
     text-transform:uppercase;
     font-size:1rem;
+    font-family: 'PT Serif', serif;
 }
 
-.fa-bars{    
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 2rem;
-}
 
 .fa-envelope-o{
     position: absolute;
@@ -71,8 +72,8 @@ header h1{
 }
 
 main{
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1;
     overflow: scroll;
     width: 100%;
     height: 100%;
@@ -110,25 +111,34 @@ main{
     justify-content: space-evenly;
 }
 .intro a{
+    box-shadow: inset 0 0 0.3rem #434961;
     display: block;
-    border: .1rem solid black;
+    border: .1rem solid #D6C1C0;
     align-self: center;
     padding: .5rem 1rem;
     font-size: 1.5rem;
     text-decoration: underline;
     font-family: 'PT Serif', serif;
+    color: black;
+    text-decoration: none;
 }
 
-.intro h2 {
-    position: relative;
-    flex-direction: column;
+.intro img {
     align-self: center;
-    font-size: 1.5rem;
-    font-family: 'PT Serif', serif;
+    height: 10rem;
+    width: 10rem;
 }
-
 /* para a tela menu */
 
+.menu{
+    display: flex;
+    flex-grow: 1;
+    height: 80% !important;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: scroll;
+}
 
 .menu ul{
     display: flex;
@@ -143,13 +153,12 @@ main{
     align-self: flex-start;
     width: 100%;
     border-bottom: .1rem solid black;
-
-}
-.feed p{
     font-family: 'PT Serif', serif;
     font-size: 2rem;
     color: #434961;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
 }
+
 .post-1{
     position: relative;
     flex-direction: column;
@@ -168,6 +177,7 @@ main{
 .profile p{
     font-size: 1rem;
     font-family: 'PT Serif', serif;
+    text-decoration: underline;
 }
 
 .fa-user{
@@ -249,19 +259,24 @@ main{
     font-size: 4.5rem !important;
 }
 
-/* Tela perfil time*/
+/* Tela perfil jogador*/
 
 .pain-ul {
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 .nome_pagina{
+    display: flex;
     font-family: 'IBM Plex Sans', sans-serif;
     align-self: center;
     font-size: 1.5rem;
 }
 .pain-ul .cima{
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -277,17 +292,24 @@ main{
     align-items: flex-start;
 }
 
+.subtop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .contadores{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     align-self: center;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
 }
 
 .seguidores{
     border: .1rem solid black;
-    border-right: 0rem;
+    border-left: 0rem;
     height: 2rem;
     padding: 0.5rem;
 }
@@ -307,11 +329,25 @@ main{
 }
 .Posts{
     border: .1rem solid black;
-    border-left: 0rem;
+    border-right: 0rem;
     padding: 0.5rem;
     margin-right: 1%;
     height: 2rem;
 }
+
+.subtop .botão_Estatísticas{
+    display: flex;
+    border: .1rem solid black;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    margin-right: 0.5rem !important;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+    color: black;
+    text-decoration: none;
+}
+
 .pain img {
     align-self: flex-start;
     height: 5rem;
@@ -326,33 +362,24 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
     margin-top: 1rem;
     padding-left: 1rem;
     border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
 }
 
 .status p{
     font-size: 1rem;
+    color: black;
     padding: 0.1rem;
     font-family: 'PT Serif', serif;
 }
 
-.estatistica {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-
+.status a{
+    color: black;
+    text-decoration: bold;
 }
-
-.estatistica p{
-    font-size: 1rem;
-    padding: 0.1rem;
-    font-family: 'PT Serif', serif;
-    border: .1rem solid black;
-
-}
-
 
 .Postagens{
     display:flex;
@@ -366,7 +393,6 @@ main{
     display:flex;
     flex-direction: row;
     justify-content: space-evenly !important;
-    border-top: .1rem solid black;
     border-bottom: .1rem solid black;
 }
 .borda{
@@ -382,73 +408,204 @@ main{
     font-size: 3rem;
 }
 
+.adicionar_post {
+    margin-bottom: 1rem;
+}
+
+.adicionar_post i {
+    font-size: 3rem;
+    color: black;
+}
+
 
 /* Tela postando*/
 
-.postar-ul {
+
+.menu_postando{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
 }
-.Postando{
-    font-family: 'IBM Plex Sans', sans-serif;
-    align-self: center;
-    font-size: 1.5rem;
-}
-.postar-ul .cima{
-    height: 100%;
+.postando{
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.postar_postando {
+    align-self: flex-start;
+    width: 100%;
+    border-bottom: .1rem solid black;
+    margin-top: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    color: #434961;
+
+}
+
+.publicar_video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.publicar_video video{
+    height: 14rem;
+    width: 14rem;
+}
+
+.postando_top form{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-self: flex-start;
 }
 
-
-.top{
-    height: 70%;
-    width: 300%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+.comentário, .marcar{
+    padding: 0.2rem;
+    margin: 0.2rem;
 }
 
-.postar img {
+.profile_postando{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    margin-bottom: 0.5rem;
+}
+
+.profile_postando p{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+}
+
+.postar_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+
+.postar_bottom .voltar {
+    border: .1rem solid black;
+    font-family: 'PT Serif', serif;
+    color: black;
+    text-decoration: none;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
+}
+
+/* para a tela menu final */
+
+.post-1 video{
+    display: block;
+    position: relative;
     align-self: center;
-    height: 10rem;
-    width: 10rem;
-    margin-top: 5%;
-
+    height: 12rem;
+    width: 14rem;
+    border: .1rem solid black;
+    padding: 0.5rem;
 }
 
-.comment {
+.video {
+    width: 88%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    padding-left: 1rem;
+    justify-content: center;
 }
 
-.comment p{
+.like_depois{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.like_depois p {
     font-size: 1rem;
-    padding: 0.1rem;
     font-family: 'PT Serif', serif;
 }
 
-.tag {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    padding-left: 1rem;
-
+.like_depois .fa-heart-o{
+    margin-left: 0.5rem;
 }
 
-.tag p{
-    font-size: 1rem;
-    padding: 0.1rem;
-    font-family: 'PT Serif', serif;
-    
+.like_depois .fa-comment-o {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
 
+.feed_postado{
+    align-self: flex-start;
+    width: 100%;
+    border-bottom: .1rem solid black;
+    font-family: 'PT Serif', serif;
+    font-size: 2rem;
+    color: #434961;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
+}
+
+.fa-user{
+    color: black;
+}
+
+/*minhas_estatisticas*/
+
+
+.estat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo_estat{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    color: #434961;
+}
+.ul_estat{
+    display: flex;
+    height: 70%;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #C76051;
+    align-self: center;
+    box-shadow: inset 0.01rem 0 0.3rem 0 #000000;
+}
+
+.textos{
+    display: flex;
+    flex-grow: 0.6;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.textos p{
+    padding-left: 1rem;
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+}
+
+
+.form_estat{
+    display: flex;
+    flex-grow: 0.2;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form_estat .enviar_p{
+    align-self: flex-end;
+    height: 1.2rem;
+    width: 3rem;
+    margin-right: 0.2rem;
+}
+.form_estat_filho label{
+    font-family: 'PT Serif', serif;
+    font-size: 1rem;
+    padding-left: 0.2rem;
 }
