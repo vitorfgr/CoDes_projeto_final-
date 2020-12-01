@@ -299,15 +299,7 @@ main{
     align-self: center;
 }
 
-.seguidores{
-    border: .1rem solid black;
-    border-top: 0rem;
-    border-bottom: 0rem;
-    padding: 0.5rem;
-    margin-right: 1%;
-    height: 2rem;
-}
-.seguindo{
+.Seguidores{
     border: .1rem solid black;
     border-left: 0rem;
     padding: 0.5rem;
@@ -334,10 +326,6 @@ main{
     font-family: 'PT Serif', serif;
 }
 
-.num-3{
-    font-size: 0.75rem;
-    font-family: 'PT Serif', serif;
-}
 
 .palavra{
     text-decoration: underline;
@@ -375,7 +363,8 @@ main{
 
 .status a{
     color: black;
-    text-decoration: bold;
+    text-decoration: none;
+    font-weight: bolder
 }
 
 .Postagens{
