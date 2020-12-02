@@ -378,7 +378,7 @@ main{
 
 .status a{
     color: black;
-    text-decoration: bold;
+    font-weight: bolder
 }
 
 .Postagens{
