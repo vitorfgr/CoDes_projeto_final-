@@ -486,16 +486,24 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    padding: 3rem;
 
 }
 
 .postar_bottom .voltar {
-    border: .1rem solid black;
+    font-size: 1rem;
     font-family: 'PT Serif', serif;
     color: black;
     text-decoration: none;
-    box-shadow: inset 0.01rem 0 0.3rem 0 #434961;
+
+}
+
+.postar_bottom .enviar_p {
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+    color: black;
+    text-decoration: none;
+
 }
 
 /* para a tela menu final */
@@ -594,18 +602,37 @@ main{
 .form_estat{
     display: flex;
     flex-grow: 0.2;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
 }
 
-.form_estat .enviar_p{
-    align-self: flex-end;
-    height: 1.2rem;
-    width: 3rem;
-    margin-right: 0.2rem;
-}
 .form_estat_filho label{
     font-family: 'PT Serif', serif;
     font-size: 1rem;
     padding-left: 0.2rem;
+}
+
+.botoes{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.botoes .enviar_p{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+    color: black;
+
+}
+
+.botoes .voltar{
+    font-size: 1rem;
+    font-family: 'PT Serif', serif;
+    color: black;
+
+
 }
